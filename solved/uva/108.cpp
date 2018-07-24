@@ -7,7 +7,7 @@ int main() {
   // Input
   int n;
   while (scanf("%d", &n) > 0) {
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; ++i) {
       for (int j = 0; j < n; ++j) {
         scanf("%d", &arr[i][j]);
         if (i > 0)
@@ -16,6 +16,7 @@ int main() {
           arr[i][j] += arr[i][j - 1];  // Add the rectangle from the left
         if (i > 0 && j > 0) arr[i][j] -= arr[i - 1][j - 1];
       }
+    }
 
     // Print out board
     // for (int i = 0; i < n; ++i) {
